@@ -211,6 +211,7 @@ section-1
 
 .section-1 {
     height: 20dvh;
+    margin-top: 4rem;
 }
 .section-1 p {
     color: black;
@@ -225,24 +226,39 @@ section-1
 }
 
 .section-2 {
-  margin-top: 2rem;
+  margin-top: 4rem;
+  background-color: var(--main-color);
 }
 .service-container {
-  background-color: var(--main-color);
+ padding: 5rem 0;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
 }
+
 .service-item {
   height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 2rem 5rem;
+
+  background-color: #ffffff;
   /* background-color: rebeccapurple; */
+
 
   /* margin: 20px; */
 }
+.service-item div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--main-color); */
+
+}
+
 .service-item h3, p {
   text-align: center;
   color: black;
@@ -251,7 +267,47 @@ section-1
 
 
 .section-3 {
-  background-color: red;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  align-items: center ;
+  background: linear-gradient(to bottom, white 30%, var(--main-color) 70%);
+}
+
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+.section-3 .card {
+  height: 20rem;
+}
+
+/* 
+
+ tablet  
+
+*/
+
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+
+  .service-container {
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0rem 0rem;
+    grid-gap: 20px;
+  }
+  .service-item {
+    padding: 0rem 0rem;
+  }
+
+  .team-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .main-container {
@@ -290,5 +346,35 @@ section-1
   grid-template-columns: repeat(2, 1fr);
 
 }
+.service-item {
 
+  padding: 1rem 1rem;
+}
+.service-container:hover .service-item div{
+  clip-path: circle(75% );
+
+}
+.service-item div {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  clip-path: circle(40% at 30% 00% );
+  transition: all ease-in-out .5s;
+}
+
+
+/* section 3  */
+.section-3 {
+  height: 50dvh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center ;
+  background: linear-gradient(to bottom, white 30%, var(--main-color) 70%);
+}
+.team-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
 }
