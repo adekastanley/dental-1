@@ -6,7 +6,7 @@
 
 :root {
     --main-color : #b8b8ff;
-    --primary-color : #6d6e71
+    --primary-color : #6d6e71;
 }
 
 /* body {
@@ -181,6 +181,9 @@ hero section
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+
 
   /* left: 5%; */
 }
@@ -190,6 +193,7 @@ hero section
   position: absolute;
   top: 40%;
   padding: 2rem;
+
 }
 .hero-content-div button {
   width: 50%;
@@ -218,6 +222,36 @@ section-1
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.section-2 {
+  margin-top: 2rem;
+}
+.service-container {
+  background-color: var(--main-color);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 20px;
+}
+.service-item {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 5rem;
+  /* background-color: rebeccapurple; */
+
+  /* margin: 20px; */
+}
+.service-item h3, p {
+  text-align: center;
+  color: black;
+}
+
+
+
+.section-3 {
+  background-color: red;
 }
 @media screen and (min-width: 1000px) {
   .main-container {
@@ -250,6 +284,11 @@ section-1
   }
   .hero-content-div button{
     width: 30%;
+}
+.service-container {
+
+  grid-template-columns: repeat(2, 1fr);
+
 }
 
 }
